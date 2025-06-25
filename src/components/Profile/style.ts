@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ProfileContainer=styled.div`
 
+<<<<<<< HEAD
     background-color: ${props=>props.theme['base-profile']};
     width: 54rem;
     height: 13.25rem;
@@ -40,4 +41,18 @@ export const ProfileDescription = styled.p`
   color: ${props => props.theme['base-text']};
   line-height: 1.6;
   margin: 0;
+=======
+`
+export const ProfileImg=styled.div`
+
+`
+export const ProfileName=styled.div`
+
+`
+export const ProfileBio=styled.div`
+
+`
+export const ProfileInfo=styled.div`
+
+>>>>>>> 63544e455a620b77e3eb5f0810f5b796570aac69
 `
