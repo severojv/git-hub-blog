@@ -1,5 +1,10 @@
-export function Post(){
+import { Post } from "../../components/Post";
+import { HomePost } from "./style";
+
+export function Posts() {
     return (
-        <div>ola</div>
+        <HomePost>
+            <Post></Post>
+        </HomePost>
     )
 }
