@@ -1,16 +1,32 @@
-import { IssuesContainer, IssuesTitle } from "./style";
+import { IssuesBody, IssuesContainer, IssuesTitle } from "./style";
+import { Link } from "react-router-dom";
+interface IssueProps {
+    id: number
+    title: string
+    body: string
+    created_at: string
+}
+export function Issues({ id, title, body, created_at }: IssueProps) {
 
-export function Issues() {
+
     return (
-        <IssuesContainer>
+        <IssuesContainer >
 
-            <IssuesTitle>
-                <h4>JavaScript data types and data structures</h4>
-                <p>há 1 dia</p>
-            </IssuesTitle>
-            <span>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
-            </span>
+            <div key={id}>
+
+                <Link to={`/issue/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <IssuesTitle >
+                        <h4>{title}</h4>
+                        <p>{new Date(created_at).toLocaleDateString("pt-BR")}</p>
+
+                    </IssuesTitle>
+                </Link>
+                <IssuesBody>
+                    <p>{body.slice(0, 150)}...</p>
+
+                </IssuesBody>
+            </div>
 
         </IssuesContainer>
-    )
+    );
 }
