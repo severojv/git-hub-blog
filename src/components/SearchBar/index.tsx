@@ -2,6 +2,7 @@ import { SearchBarContainer, SearchBarInput } from "./style";
 
 
 export function SearchBar() {
+
     return (
         <SearchBarContainer>
 

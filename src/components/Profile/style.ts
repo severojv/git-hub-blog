@@ -10,6 +10,9 @@ export const ProfileContainer = styled.div`
 `
 export const ProfileImg = styled.div`
     margin: 2.5rem;
+    img{
+        max-width: 148px;
+    }
 `
 export const ProfileName = styled.div`
     margin-right: 2rem;
@@ -38,6 +41,7 @@ export const ProfileBio = styled.div`
 export const ProfileInfo = styled.div`
     flex-direction: column;
     margin-top: 2.5rem;
+    width: 44rem;
 `
 export const ProfileDescription = styled.div`
   color: ${props => props.theme['base-text']};
